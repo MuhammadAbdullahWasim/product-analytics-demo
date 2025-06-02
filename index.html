@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analytics Demo Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header, footer {
+      background: #2c3e50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    .container {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2em;
+    }
+    .feature {
+      background: white;
+      padding: 1em;
+      border-radius: 8px;
+      flex: 1;
+      margin: 0 0.5em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    form {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 1em;
+      margin: 1em 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to ProductX</h1>
+  <p>Track user actions. Gain insights. Improve UX.</p>
+</header>
+
+<div class="container">
+  <section class="features">
+    <div class="feature">
+      <h3>Real-time Tracking</h3>
+      <p>Monitor your users as they interact with your product.</p>
+      <button onclick="alert('Learn More Clicked')" id="learn-more-btn">Learn More</button>
+    </div>
+    <div class="feature">
+      <h3>Smart Funnels</h3>
+      <p>Understand where users drop off and why.</p>
+      <button onclick="alert('Try Funnels Clicked')" id="try-funnels-btn">Try Funnels</button>
+    </div>
+  </section>
+
+  <form id="signup-form">
+    <h2>Sign Up for Free</h2>
+    <input type="text" placeholder="Full Name" id="name"/>
+    <input type="email" placeholder="Email" id="email"/>
+    <button type="submit" id="signup-btn">Create Account</button>
+  </form>
+</div>
+
+<footer>
+  <p>Follow us: 
+    <a href="#" id="twitter-link" style="color: #1DA1F2;">Twitter</a> | 
+    <a href="#" id="linkedin-link" style="color: #0077B5;">LinkedIn</a>
+  </p>
+</footer>
+
+<script>
+  // Tracking simulation for signup
+  document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Signup submitted!');
+    // Later, GA4 or Mixpanel event can be added here
+  });
+</script>
+
+</body>
+</html>
